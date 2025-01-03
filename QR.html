@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Heiba</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f0f0f0; /* Gray background for the page */
+        }
+
+        /* Loading Screen */
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            opacity: 1;
+            transition: opacity 2s ease-in-out;
+        }
+
+        #loading img {
+            width: 100px; /* Smaller logo size */
+        }
+
+        /* Card Layout */
+        .card {
+            display: flex;
+            width: 70%; /* Reduced width */
+            max-width: 600px; /* Reduced max-width */
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            flex-direction: column; /* Stack the text sections vertically */
+        }
+
+        /* Left Half (Profile) */
+        .left-half {
+            background-color: #455a64; /* Darker gray color */
+            color: white;
+            padding: 20px; /* Reduced padding */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left-half img {
+            width: 80px; /* Smaller profile image */
+            height: 80px; /* Smaller profile image */
+            border-radius: 50%;
+            margin-bottom: 15px; /* Reduced margin */
+        }
+
+        .left-half h2 {
+            margin: 5px 0;
+            font-size: 18px; /* Reduced font size */
+        }
+
+        .left-half p {
+            font-size: 14px; /* Reduced font size */
+            margin: 5px 0;
+        }
+
+        /* Style for the buttons */
+        .left-half a {
+            text-decoration: none;
+            color: #e91e63; /* Pink color for the buttons */
+            background-color: white; /* White background for buttons */
+            padding: 6px 12px; /* Reduced padding */
+            border-radius: 5px;
+            font-size: 14px; /* Reduced font size */
+            margin: 5px; /* Smaller space between buttons */
+            transition: background-color 0.3s;
+            border: 1px solid #e91e63; /* Pink border */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left-half a:hover {
+            background-color: #f8bbd0; /* Light pink on hover */
+        }
+
+        /* Flexbox Layout for the buttons to be next to each other */
+        .left-half .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 5px; /* Smaller gap between buttons */
+        }
+
+        /* Right Half (Details) */
+        .right-half {
+            background-color: white;
+            color: #455a64; /* Darker text color */
+            padding: 20px; /* Reduced padding */
+        }
+
+        .right-half h3 {
+            margin-bottom: 15px; /* Reduced margin */
+            font-size: 20px; /* Reduced font size */
+            color: #455a64;
+        }
+
+        .right-half .summary {
+            font-size: 14px; /* Reduced font size */
+            color: #777;
+            margin-top: 5px;
+        }
+
+        .right-half a {
+            text-decoration: none;
+            color: #e91e63; /* Pink color for the links */
+            font-size: 14px; /* Reduced font size */
+            margin: 5px 0;
+            display: inline-block;
+        }
+
+        .right-half .contact-info {
+            font-size: 16px; /* Reduced font size */
+            margin-top: 15px; /* Reduced margin */
+        }
+
+        /* Social Media Section */
+        .social-media a {
+            text-decoration: none;
+            color: #0077b5; /* LinkedIn blue */
+            font-size: 14px; /* Reduced font size */
+            margin: 5px;
+        }
+
+        /* Icons */
+        .icon {
+            margin-right: 6px; /* Reduced icon margin */
+        }
+
+        /* Ensure proper layout of two halves */
+        .card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Custom Button Style for Icons */
+        .contact-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            padding: 6px 10px; /* Smaller padding for compactness */
+            border-radius: 5px;
+            margin: 5px; /* Reduced margin */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border: 1px solid #e91e63;
+        }
+
+        .contact-button:hover {
+            background-color: #f8bbd0; /* Light pink on hover */
+        }
+
+        .contact-button img {
+            width: 14px; /* Smaller icon size to match text */
+            height: 14px; /* Smaller icon size to match text */
+            margin-right: 6px; /* Reduced margin */
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen with Logo -->
+    <div id="loading">
+        <img src="https://www.hydro-e.com/logo.png" alt="Loading...">
+    </div>
+
+    <!-- Digital Business Card -->
+    <div class="card">
+        <!-- Left Half: Profile Information -->
+        <div class="left-half">
+            <img src="team-member1.jpeg" alt="Mohamed Heiba">
+            <h2>Mohamed Heiba</h2>
+            <p>CEO | Hydro Dynamic Engineering Consultants</p>
+            <!-- Button container for the buttons to be next to each other -->
+            <div class="button-container">
+                <!-- Call Button with Icon -->
+                <a class="contact-button" href="tel:+201099998723">
+                    <img src="call.jpeg" alt="Call Icon">
+                    Call
+                </a>
+                <!-- Email Button with Icon -->
+                <a class="contact-button" href="mailto:Mohamedheba@hydro-e.com">
+                    <img src="email.png" alt="Email Icon">
+                    Email
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Half: Summary and Contact Information -->
+        <div class="right-half">
+            <p class="summary">
+                Mohamed Heiba has an extensive career in the plastics industry since 1995, making him one of the prominent experts in the field.
+            </p>
+
+            <div class="contact-info">
+                <p><span class="icon">📞</span><strong>Phone:</strong> +201099998723</p>
+                <p><span class="icon">📞</span><strong>Secondary Phone:</strong> +43(699)81688912</p>
+                <p><span class="icon">📧</span><strong>Email:</strong> <a href="mailto:Mohamedheba@hydro-e.com">Mohamedheba@hydro-e.com</a></p>
+                <p><span class="icon">🌐</span><strong>Website:</strong> <a href="https://www.hydro-e.com" target="_blank">www.hydro-e.com</a></p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <a href="https://www.linkedin.com/company/hydro-e2025/about/?viewAsMember=true" target="_blank">
+                    <img src="linkedin-icon.png" alt="LinkedIn" width="20" height="20">LinkedIn
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script to hide the loading screen once the page is fully loaded -->
+    <script>
+        setTimeout(function() {
+            document.getElementById('loading').style.display = 'none';
+        }, 2000); // Delay of 2 seconds
+    </script>
+</body>
+</html>
